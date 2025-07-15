@@ -256,7 +256,7 @@ body {
 
 /* Section Styles */
 .section {
-    padding: 100px 0;
+    padding: 60px 0;
     position: relative;
 }
 
@@ -276,7 +276,7 @@ body {
     font-size: 1.2rem;
     color: #a0a0a0;
     text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -284,11 +284,11 @@ body {
 
 /* Hero Section */
 .hero {
-    min-height: 100vh;
+    min-height: auto;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     position: relative;
-    padding: 120px 0 80px;
+    padding: 120px 0 60px;
 }
 
 .hero-content {
