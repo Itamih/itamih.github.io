@@ -2,553 +2,201 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
-    <title>Itamih - Building solutions that work</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: #0a0a0a;
-            color: #ffffff;
-            line-height: 1.6;
-            overflow-x: hidden;
-            height: 100vh;
-        }
-        
-        .nav {
-            position: fixed;
-            top: 0;
-            right: 0;
-            padding: 30px 40px;
-            z-index: 1000;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 30px;
-        }
-        
-        .nav-link {
-            color: #b0b0b0;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-            font-size: 14px;
-        }
-        
-        .nav-link:hover, .nav-link.active {
-            color: #ffffff;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .hero {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        /* Animated Background */
-        .animated-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
-        }
-        
-        .floating-shapes {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            overflow: hidden;
-        }
-        
-        .shape {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 50%;
-            animation: float 20s infinite linear;
-        }
-        
-        .shape:nth-child(1) {
-            width: 80px;
-            height: 80px;
-            left: 10%;
-            animation-delay: 0s;
-            animation-duration: 25s;
-        }
-        
-        .shape:nth-child(2) {
-            width: 120px;
-            height: 120px;
-            left: 20%;
-            animation-delay: -5s;
-            animation-duration: 30s;
-        }
-        
-        .shape:nth-child(3) {
-            width: 60px;
-            height: 60px;
-            left: 70%;
-            animation-delay: -10s;
-            animation-duration: 20s;
-        }
-        
-        .shape:nth-child(4) {
-            width: 100px;
-            height: 100px;
-            left: 80%;
-            animation-delay: -15s;
-            animation-duration: 35s;
-        }
-        
-        .shape:nth-child(5) {
-            width: 40px;
-            height: 40px;
-            left: 50%;
-            animation-delay: -20s;
-            animation-duration: 15s;
-        }
-        
-        @keyframes float {
-            0% {
-                transform: translateY(100vh) rotate(0deg);
-                opacity: 0;
-            }
-            10% {
-                opacity: 1;
-            }
-            90% {
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-100vh) rotate(360deg);
-                opacity: 0;
-            }
-        }
-        
-        .grid-lines {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-            background-size: 50px 50px;
-            animation: gridPulse 8s ease-in-out infinite;
-        }
-        
-        @keyframes gridPulse {
-            0%, 100% { opacity: 0.1; }
-            50% { opacity: 0.3; }
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 10;
-            max-width: 900px;
-        }
-        
-        .logo {
-            font-size: 5rem;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            margin-bottom: 2rem;
-            background: linear-gradient(135deg, #ffffff 0%, #a0a0a0 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: logoGlow 3s ease-in-out infinite alternate;
-        }
-        
-        @keyframes logoGlow {
-            0% { filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.1)); }
-            100% { filter: drop-shadow(0 0 40px rgba(255, 255, 255, 0.2)); }
-        }
-        
-        .tagline {
-            font-size: 2rem;
-            font-weight: 300;
-            color: #e0e0e0;
-            margin-bottom: 2rem;
-            line-height: 1.3;
-        }
-        
-        .description {
-            font-size: 1.3rem;
-            color: #b0b0b0;
-            margin-bottom: 4rem;
-            line-height: 1.6;
-        }
-        
-        .highlight {
-            color: #ffffff;
-            font-weight: 500;
-        }
-        
-        .cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 16px;
-            background: linear-gradient(135deg, #333333 0%, #1a1a1a 100%);
-            border: 2px solid #404040;
-            color: #ffffff;
-            padding: 24px 48px;
-            text-decoration: none;
-            border-radius: 12px;
-            font-weight: 600;
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .cta::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-            transition: left 0.5s ease;
-        }
-        
-        .cta:hover::before {
-            left: 100%;
-        }
-        
-        .cta:hover {
-            transform: translateY(-3px);
-            border-color: #606060;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
-        
-        .contact-section {
-            position: absolute;
-            bottom: 40px;
-            left: 50%;
-            transform: translateX(-50%);
-            text-align: center;
-            z-index: 10;
-        }
-        
-        .contact-simple h2 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            color: #b0b0b0;
-            font-weight: 400;
-        }
-        
-        .contact-simple a {
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 1.1rem;
-            transition: color 0.3s ease;
-        }
-        
-        .contact-simple a:hover {
-            color: #d0d0d0;
-        }
-        
-        /* Contact Form Modal */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            backdrop-filter: blur(15px);
-            z-index: 2000;
-        }
-
-        .modal.active {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .modal-content {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 20px;
-            padding: 50px;
-            max-width: 600px;
-            width: 90%;
-            position: relative;
-            animation: modalSlideIn 0.4s ease;
-        }
-
-        @keyframes modalSlideIn {
-            from {
-                opacity: 0;
-                transform: translateY(-30px) scale(0.95);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
-        }
-
-        .modal-close {
-            position: absolute;
-            top: 20px;
-            right: 25px;
-            background: none;
-            border: none;
-            color: #999;
-            font-size: 28px;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-
-        .modal-close:hover {
-            color: #fff;
-        }
-
-        .contact-form h3 {
-            font-size: 2rem;
-            margin-bottom: 15px;
-            color: #ffffff;
-        }
-
-        .contact-form p {
-            color: #b0b0b0;
-            margin-bottom: 35px;
-            font-size: 1.1rem;
-        }
-
-        .form-group {
-            margin-bottom: 25px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 10px;
-            color: #e0e0e0;
-            font-weight: 500;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 16px 20px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 10px;
-            color: #ffffff;
-            font-size: 16px;
-            transition: all 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: rgba(255, 255, 255, 0.4);
-            background: rgba(255, 255, 255, 0.08);
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .submit-btn {
-            width: 100%;
-            padding: 18px;
-            background: linear-gradient(135deg, #333333 0%, #1a1a1a 100%);
-            border: 1px solid #404040;
-            color: #ffffff;
-            border-radius: 10px;
-            font-weight: 600;
-            font-size: 16px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .submit-btn:hover {
-            border-color: #606060;
-            transform: translateY(-2px);
-        }
-
-        .submit-btn:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-            transform: none;
-        }
-
-        .form-status {
-            margin-top: 20px;
-            padding: 15px;
-            border-radius: 8px;
-            font-size: 14px;
-            text-align: center;
-            display: none;
-        }
-
-        .form-status.success {
-            background: rgba(34, 197, 94, 0.1);
-            color: #22c55e;
-            border: 1px solid rgba(34, 197, 94, 0.3);
-        }
-
-        .form-status.error {
-            background: rgba(239, 68, 68, 0.1);
-            color: #ef4444;
-            border: 1px solid rgba(239, 68, 68, 0.3);
-        }
-        
-        @media (max-width: 768px) {
-            body {
-                height: auto;
-                min-height: 100vh;
-                overflow-y: scroll;
-                -webkit-overflow-scrolling: touch;
-            }
-            
-            .hero {
-                min-height: 90vh;
-                padding: 60px 20px 40px;
-                justify-content: flex-start;
-                padding-top: 100px;
-            }
-            
-            .logo {
-                font-size: 3rem;
-                margin-bottom: 1.5rem;
-            }
-            
-            .tagline {
-                font-size: 1.5rem;
-                margin-bottom: 1.5rem;
-            }
-            
-            .description {
-                font-size: 1.1rem;
-                margin-bottom: 2.5rem;
-            }
-            
-            .cta {
-                padding: 20px 40px;
-                font-size: 1.1rem;
-                margin-bottom: 3rem;
-            }
-            
-            .contact-section {
-                padding: 30px 0 50px;
-                position: relative;
-                margin-top: 0;
-            }
-            
-            .contact-simple h2 {
-                font-size: 1.1rem;
-            }
-            
-            .contact-simple a {
-                font-size: 1rem;
-            }
-            
-            .modal-content {
-                padding: 30px;
-                margin: 20px;
-                max-height: 90vh;
-                overflow-y: auto;
-            }
-            
-            .nav {
-                padding: 20px 30px;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .logo {
-                font-size: 2.5rem;
-            }
-            
-            .tagline {
-                font-size: 1.3rem;
-            }
-            
-            .description {
-                font-size: 1rem;
-                margin-bottom: 2.5rem;
-            }
-            
-            .cta {
-                padding: 18px 35px;
-                font-size: 1rem;
-            }
-            
-            .hero {
-                padding: 50px 15px 70px;
-            }
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itamih - Custom Software for Business Automation</title>
+    <meta name="description" content="We build custom software that automates business processes for small businesses. Save hours per week with tailored solutions that work for you.">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="background-container">
+        <div class="mesh-gradient"></div>
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
     <nav class="nav">
-        <div class="nav-links">
-            <a href="index.html" class="nav-link active">Home</a>
-            <a href="case-studies.html" class="nav-link">Case Studies</a>
+        <div class="nav-container">
+            <div class="logo-section">
+                <a href="#" class="logo">Itamih</a>
+                <span class="tagline">Custom software for growing businesses</span>
+            </div>
+            <div class="nav-links">
+                <a href="#services" class="nav-link">Services</a>
+                <a href="case-studies.html" class="nav-link">Case Studies</a>
+                <a href="#process" class="nav-link">Process</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="#contact" class="nav-link" onclick="showContactForm(); return false;">Contact</a>
+                <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/sam-itamih/30min'});return false;" class="nav-cta">Book Free Call</a>
+            </div>
         </div>
     </nav>
 
     <section class="hero">
-        <div class="animated-bg"></div>
-        <div class="grid-lines"></div>
-        <div class="floating-shapes">
-            <div class="shape"></div>
-            <div class="shape"></div>
-            <div class="shape"></div>
-            <div class="shape"></div>
-            <div class="shape"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Custom Software That Automates Your Business</h1>
+                <p class="hero-subtitle">
+                    We build tailored software solutions that eliminate repetitive tasks and save your team hours every week. Focus on growth, not paperwork.
+                </p>
+                <div class="hero-cta">
+                    <button onclick="showContactForm()" class="btn-primary">
+                        Get Free Consultation
+                    </button>
+                    <a href="#case-studies" class="btn-secondary">
+                        View Our Work
+                    </a>
+                </div>
+                <!-- <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">20+</span>
+                        <span class="stat-label">Hours saved weekly</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Businesses automated</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">95%</span>
+                        <span class="stat-label">Client satisfaction</span>
+                    </div>
+                </div> -->
+            </div>
         </div>
-        
-        <div class="hero-content">
-            <h1 class="logo">Itamih</h1>
-            <p class="tagline">Building AI that works.<br>Guiding humans who lead.</p>
-            <p class="description">
-                We create intelligent systems for ambitious businesses.<br>
-                We build faster, smarter solutions that deliver exceptional outcomes.<br>
-                <span class="highlight">We help you navigate what's next.</span>
+    </section>
+
+    <section id="services" class="section">
+        <div class="container">
+            <h2 class="section-title">How We Transform Your Business</h2>
+            <p class="section-subtitle">
+                We don't just build software—we solve business problems. Our custom solutions integrate seamlessly with your existing workflow.
             </p>
-            <button onclick="showContactForm()" class="cta">
-                <span>Get started</span>
-                <span>→</span>
-            </button>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3 class="service-title">Business Process Analysis</h3>
+                    <p class="service-description">
+                        We start by understanding your current workflows, identifying bottlenecks, and mapping out opportunities for automation.
+                    </p>
+                    <ul class="service-features">
+                        <li>Comprehensive workflow audit</li>
+                        <li>ROI calculation and timeline</li>
+                        <li>Custom solution recommendations</li>
+                        <li>Risk assessment and mitigation</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3 class="service-title">Custom Software Development</h3>
+                    <p class="service-description">
+                        Our development team builds scalable, secure solutions tailored to your specific needs using modern technologies.
+                    </p>
+                    <ul class="service-features">
+                        <li>Web and mobile applications</li>
+                        <li>Database design and optimization</li>
+                        <li>API integrations and workflows</li>
+                        <li>Security and compliance built-in</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3 class="service-title">Ongoing Support & Maintenance</h3>
+                    <p class="service-description">
+                        We provide continuous support, updates, and improvements to ensure your systems run smoothly and evolve with your business.
+                    </p>
+                    <ul class="service-features">
+                        <li>24/7 system monitoring</li>
+                        <li>Regular updates and improvements</li>
+                        <li>Staff training and documentation</li>
+                        <li>Performance optimization</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        
-        <div class="contact-section">
-            <div class="contact-simple">
-                <h2>Ready to start?</h2>
-                <p><a href="mailto:hello@itamih.com">hello@itamih.com</a></p>
+    </section>
+
+    <section id="case-studies" class="section case-studies">
+        <div class="container">
+            <h2 class="section-title">Success Stories</h2>
+            <p class="section-subtitle">
+                Real businesses, real results. See how our custom software solutions transformed operations and saved countless hours.
+            </p>
+            <div class="case-study-grid">
+                <div class="case-study-card">
+                    <div class="case-study-badge">Healthcare</div>
+                    <h3 class="case-study-title">Dental Practice Management System</h3>
+                    <p class="case-study-description">
+                        A growing dental practice was drowning in paperwork and manual scheduling. We built a comprehensive management system that automated patient scheduling, billing, and insurance processing.
+                    </p>
+                    <div class="case-study-result">
+                        <span class="case-study-result-number">20 hrs/week</span>
+                        <span class="case-study-result-text">Administrative time saved</span>
+                    </div>
+                </div>
+                <div class="case-study-card">
+                    <div class="case-study-badge">B2B Platform</div>
+                    <h3 class="case-study-title">B2B Marketplace Platform</h3>
+                    <p class="case-study-description">
+                        Built a comprehensive B2B marketplace that connects startups with enterprise partners, including payment processing, analytics, and automated matching systems.
+                    </p>
+                    <div class="case-study-result">
+                        <span class="case-study-result-number">300%</span>
+                        <span class="case-study-result-text">Increase in partner connections</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="section process-section">
+        <div class="container">
+            <h2 class="section-title">Our Proven Process</h2>
+            <p class="section-subtitle">
+                We follow a structured approach to ensure your project is delivered on time, within budget, and exceeds expectations.
+            </p>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="process-number">1</div>
+                    <h3 class="process-title">Discovery Call</h3>
+                    <p class="process-description">
+                        Free 30-minute consultation to understand your challenges and explore potential solutions.
+                    </p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">2</div>
+                    <h3 class="process-title">Process Analysis</h3>
+                    <p class="process-description">
+                        Deep dive into your current workflows to identify automation opportunities and create a detailed roadmap.
+                    </p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">3</div>
+                    <h3 class="process-title">Development</h3>
+                    <p class="process-description">
+                        Build your custom solution using modern technologies with regular updates and feedback sessions.
+                    </p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">4</div>
+                    <h3 class="process-title">Launch & Support</h3>
+                    <p class="process-description">
+                        Deploy your solution and provide ongoing support to ensure smooth operation and continuous improvement.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section cta-section">
+        <div class="container">
+            <h2 class="cta-title">Ready to Automate Your Business?</h2>
+            <p class="cta-subtitle">
+                Stop wasting time on repetitive tasks. Let's build custom software that transforms your operations.
+            </p>
+            <div class="cta-buttons">
+                <button onclick="showContactForm()" class="btn-white">
+                    Start Your Project
+                </button>
+                <a href="mailto:hello@itamih.com" class="btn-outline">
+                    Email Us
+                </a>
             </div>
         </div>
     </section>
@@ -558,16 +206,16 @@
         <div class="modal-content">
             <button class="modal-close" onclick="hideContactForm()">&times;</button>
             <form class="contact-form" id="contactForm">
-                <h3>Let's navigate AI together</h3>
-                <p>We help business leaders navigate this new world of AI. Tell us about your challenges and we'll explore solutions together.</p>
+                <h3>Let's discuss your automation needs</h3>
+                <p>Tell us about your business challenges and we'll explore how custom software can save you time and money.</p>
                 
                 <div class="form-group">
-                    <label for="name">Name *</label>
+                    <label for="name">Name</label>
                     <input type="text" id="name" name="name" required>
                 </div>
                 
                 <div class="form-group">
-                    <label for="email">Email *</label>
+                    <label for="email">Email</label>
                     <input type="email" id="email" name="email" required>
                 </div>
                 
@@ -577,12 +225,14 @@
                 </div>
                 
                 <div class="form-group">
-                    <label for="message">How can we help? *</label>
-                    <textarea id="message" name="message" placeholder="What AI or technical challenges are you facing?" required></textarea>
+                    <label for="message">What processes would you like to automate?</label>
+                    <textarea id="message" name="message" 
+                        placeholder="Example: Customer scheduling, inventory management, invoicing, reporting..." 
+                        required></textarea>
                 </div>
                 
                 <button type="submit" class="submit-btn" id="submitBtn">
-                    Send message
+                    Send Message
                 </button>
                 
                 <div id="formStatus" class="form-status"></div>
@@ -590,7 +240,46 @@
         </div>
     </div>
 
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Itamih</h3>
+                    <p>
+                        We build custom software that automates business processes for small businesses. 
+                        Save time, reduce errors, and focus on what matters most.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#services">Business Process Analysis</a></li>
+                        <li><a href="#services">Custom Software Development</a></li>
+                        <li><a href="#services">Ongoing Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="#case-studies">Case Studies</a></li>
+                        <li><a href="#process">Our Process</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>hello@itamih.com</p>
+                    <p>Book a free consultation to get started</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Itamih. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
     <script>
+        // Contact form functionality
         function showContactForm() {
             document.getElementById('contactModal').classList.add('active');
             document.body.style.overflow = 'hidden';
@@ -625,7 +314,9 @@
             // Disable button and show loading
             submitBtn.disabled = true;
             submitBtn.textContent = 'Sending...';
-            status.style.display = 'none';
+            status.className = 'form-status loading';
+            status.textContent = 'Sending your message...';
+            status.style.display = 'block';
             
             // Get form data
             const formData = {
@@ -633,11 +324,11 @@
                 email: document.getElementById('email').value,
                 company: document.getElementById('company').value,
                 message: document.getElementById('message').value,
-                timestamp: new Date().toISOString()
+                timestamp: new Date().toISOString(),
+                source: 'itamih.com contact form'
             };
             
             try {
-                // Send to Cloudflare Worker
                 const response = await fetch('/api/contact', {
                     method: 'POST',
                     headers: {
@@ -646,31 +337,46 @@
                     body: JSON.stringify(formData)
                 });
                 
+                const result = await response.json();
+                
                 if (response.ok) {
                     status.className = 'form-status success';
-                    status.textContent = 'Thanks! We\'ll get back to you within 24 hours.';
-                    status.style.display = 'block';
+                    status.innerHTML = `Thank you, ${formData.name}! We'll get back to you within 24 hours.`;
                     
                     // Reset form
                     document.getElementById('contactForm').reset();
                     
-                    // Close modal after 2 seconds
+                    // Close modal after 3 seconds
                     setTimeout(() => {
                         hideContactForm();
-                    }, 2000);
+                    }, 3000);
                 } else {
-                    throw new Error('Failed to send message');
+                    throw new Error(result.error || 'Failed to send message');
                 }
             } catch (error) {
                 status.className = 'form-status error';
-                status.textContent = 'Sorry, there was an error. Please try emailing us directly at hello@itamih.com';
-                status.style.display = 'block';
+                status.innerHTML = 'Sorry, there was an error. Please try emailing us directly at hello@itamih.com';
             }
             
             // Re-enable button
             submitBtn.disabled = false;
-            submitBtn.textContent = 'Send message';
+            submitBtn.textContent = 'Send Message';
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
         });
     </script>
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 </body>
 </html>
