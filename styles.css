@@ -323,6 +323,35 @@ body {
     flex-wrap: wrap;
 }
 
+.hero-mission {
+    margin-top: 60px;
+    padding-top: 60px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mission-title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: #ffffff;
+}
+
+.mission-quote {
+    font-size: 1.4rem;
+    font-style: italic;
+    color: #ffffff;
+    margin-bottom: 30px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.mission-description {
+    font-size: 1.1rem;
+    color: #a0a0a0;
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
 /* Cards */
 .card {
     background: rgba(255, 255, 255, 0.02);
