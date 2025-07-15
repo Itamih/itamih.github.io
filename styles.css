@@ -691,6 +691,9 @@ body {
     border-radius: 12px;
     padding: 40px;
     transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
 .case-study-card:hover {

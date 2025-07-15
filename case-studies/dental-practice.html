@@ -22,11 +22,11 @@
             </div>
             <div class="nav-links">
                 <a href="../index.html#services" class="nav-link">Services</a>
-                <a href="../case-studies.html" class="nav-link active">Case Studies</a>
                 <a href="../index.html#process" class="nav-link">Process</a>
                 <a href="../about.html" class="nav-link">About</a>
+                <a href="../case-studies.html" class="nav-link active">Case Studies</a>
                 <a href="#contact" class="nav-link" onclick="showContactForm(); return false;">Contact</a>
-                <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/sam-itamih/30min'});return false;" class="nav-cta">Book Free Call</a>
+                <a href="#contact" class="nav-cta" onclick="showContactForm(); return false;">Get in Touch</a>
             </div>
         </div>
     </nav>
@@ -46,20 +46,6 @@
             <p class="hero-subtitle">
                 How we transformed a growing dental practice's operations by automating patient scheduling, billing, and insurance processing with a comprehensive management system.
             </p>
-            <div class="results-grid">
-                <div class="result-card">
-                    <span class="result-number">20 hrs</span>
-                    <span class="result-label">Weekly time saved</span>
-                </div>
-                <div class="result-card">
-                    <span class="result-number">95%</span>
-                    <span class="result-label">Reduction in scheduling errors</span>
-                </div>
-                <div class="result-card">
-                    <span class="result-number">6 months</span>
-                    <span class="result-label">Full ROI achieved</span>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -104,10 +90,6 @@
                 <div class="solution-item">
                     <h4>Unified Patient Records</h4>
                     <p>Centralized patient database with treatment history, imaging, billing information, and notes accessible from any location. Automated backup and HIPAA-compliant security.</p>
-                </div>
-                <div class="solution-item">
-                    <h4>Analytics Dashboard</h4>
-                    <p>Real-time insights into practice performance, appointment trends, revenue tracking, and staff productivity. Automated reporting for better decision-making.</p>
                 </div>
             </div>
         </div>
@@ -206,7 +188,7 @@
                 
                 <div class="form-group">
                     <label for="company">Company</label>
-                    <input type="text" id="company" name="company">
+                    <input type="text" id="company" name="company" required>
                 </div>
                 
                 <div class="form-group">
@@ -348,6 +330,5 @@
             submitBtn.textContent = 'Send Message';
         });
     </script>
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 </body>
 </html>

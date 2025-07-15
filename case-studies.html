@@ -22,39 +22,18 @@
             </div>
             <div class="nav-links">
                 <a href="index.html#services" class="nav-link">Services</a>
-                <a href="case-studies.html" class="nav-link active">Case Studies</a>
                 <a href="index.html#process" class="nav-link">Process</a>
                 <a href="about.html" class="nav-link">About</a>
+                <a href="case-studies.html" class="nav-link active">Case Studies</a>
                 <a href="#contact" class="nav-link" onclick="showContactForm(); return false;">Contact</a>
-                <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/sam-itamih/30min'});return false;" class="nav-cta">Book Free Call</a>
+                <a href="#contact" class="nav-cta" onclick="showContactForm(); return false;">Get in Touch</a>
             </div>
         </div>
     </nav>
 
     <section class="hero">
         <div class="container">
-            <h1 class="hero-title">Success Stories That Speak for Themselves</h1>
-            <p class="hero-subtitle">
-                See how we've helped businesses automate their operations, save time, and scale efficiently with custom software solutions.
-            </p>
-            <div class="metrics-grid">
-                <div class="metric">
-                    <span class="metric-number">50+</span>
-                    <span class="metric-label">Hours saved weekly</span>
-                </div>
-                <div class="metric">
-                    <span class="metric-number">95%</span>
-                    <span class="metric-label">Error reduction</span>
-                </div>
-                <div class="metric">
-                    <span class="metric-number">3x</span>
-                    <span class="metric-label">Faster workflows</span>
-                </div>
-                <div class="metric">
-                    <span class="metric-number">100%</span>
-                    <span class="metric-label">Client satisfaction</span>
-                </div>
-            </div>
+            <h1 class="hero-title">Case Studies</h1>
         </div>
     </section>
 
@@ -165,7 +144,7 @@
                 
                 <div class="form-group">
                     <label for="company">Company</label>
-                    <input type="text" id="company" name="company">
+                    <input type="text" id="company" name="company" required>
                 </div>
                 
                 <div class="form-group">
@@ -307,6 +286,5 @@
             submitBtn.textContent = 'Send Message';
         });
     </script>
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 </body>
 </html>

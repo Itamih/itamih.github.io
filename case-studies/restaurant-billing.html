@@ -85,11 +85,11 @@
             </div>
             <div class="nav-links">
                 <a href="../index.html#services" class="nav-link">Services</a>
-                <a href="../case-studies.html" class="nav-link active">Case Studies</a>
                 <a href="../index.html#process" class="nav-link">Process</a>
                 <a href="../about.html" class="nav-link">About</a>
+                <a href="../case-studies.html" class="nav-link active">Case Studies</a>
                 <a href="#contact" class="nav-link" onclick="showContactForm(); return false;">Contact</a>
-                <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/sam-itamih/30min'});return false;" class="nav-cta">Book Free Call</a>
+                <a href="#contact" class="nav-cta" onclick="showContactForm(); return false;">Get in Touch</a>
             </div>
         </div>
     </nav>
@@ -109,20 +109,6 @@
             <p class="hero-subtitle">
                 How we automated Huddle House's entire billing workflow from order processing to vendor payments, eliminating manual errors and improving cash flow management.
             </p>
-            <div class="results-grid">
-                <div class="result-card">
-                    <span class="result-number">15 hrs</span>
-                    <span class="result-label">Weekly time saved</span>
-                </div>
-                <div class="result-card">
-                    <span class="result-number">95%</span>
-                    <span class="result-label">Reduction in billing errors</span>
-                </div>
-                <div class="result-card">
-                    <span class="result-number">2 months</span>
-                    <span class="result-label">Payback period</span>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -167,10 +153,6 @@
                 <div class="solution-item">
                     <h4>Real-time Financial Dashboard</h4>
                     <p>Live cash flow monitoring, vendor performance analytics, and automated financial reporting with customizable alerts for unusual spending patterns.</p>
-                </div>
-                <div class="solution-item">
-                    <h4>Vendor Management Portal</h4>
-                    <p>Self-service vendor portal for invoice submission, payment status tracking, and document management, reducing administrative overhead.</p>
                 </div>
             </div>
         </div>
@@ -269,7 +251,7 @@
                 
                 <div class="form-group">
                     <label for="company">Company</label>
-                    <input type="text" id="company" name="company">
+                    <input type="text" id="company" name="company" required>
                 </div>
                 
                 <div class="form-group">
@@ -411,6 +393,5 @@
             submitBtn.textContent = 'Send Message';
         });
     </script>
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 </body>
 </html>

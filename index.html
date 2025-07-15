@@ -23,11 +23,11 @@
             </div>
             <div class="nav-links">
                 <a href="#services" class="nav-link">Services</a>
-                <a href="case-studies.html" class="nav-link">Case Studies</a>
                 <a href="#process" class="nav-link">Process</a>
                 <a href="about.html" class="nav-link">About</a>
+                <a href="case-studies.html" class="nav-link">Case Studies</a>
                 <a href="#contact" class="nav-link" onclick="showContactForm(); return false;">Contact</a>
-                <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/sam-itamih/30min'});return false;" class="nav-cta">Book Free Call</a>
+                <a href="#contact" class="nav-cta" onclick="showContactForm(); return false;">Get in Touch</a>
             </div>
         </div>
     </nav>
@@ -119,7 +119,7 @@
                 Real businesses, real results. See how our custom software solutions transformed operations and saved countless hours.
             </p>
             <div class="case-study-grid">
-                <div class="case-study-card">
+                <a href="case-studies/dental-practice.html" class="case-study-card">
                     <div class="case-study-badge">Healthcare</div>
                     <h3 class="case-study-title">Dental Practice Management System</h3>
                     <p class="case-study-description">
@@ -129,8 +129,8 @@
                         <span class="case-study-result-number">20 hrs/week</span>
                         <span class="case-study-result-text">Administrative time saved</span>
                     </div>
-                </div>
-                <div class="case-study-card">
+                </a>
+                <a href="case-studies/b2b-marketplace.html" class="case-study-card">
                     <div class="case-study-badge">B2B Platform</div>
                     <h3 class="case-study-title">B2B Marketplace Platform</h3>
                     <p class="case-study-description">
@@ -140,7 +140,7 @@
                         <span class="case-study-result-number">300%</span>
                         <span class="case-study-result-text">Increase in partner connections</span>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </section>
@@ -221,7 +221,7 @@
                 
                 <div class="form-group">
                     <label for="company">Company</label>
-                    <input type="text" id="company" name="company">
+                    <input type="text" id="company" name="company" required>
                 </div>
                 
                 <div class="form-group">
@@ -377,6 +377,5 @@
             });
         });
     </script>
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 </body>
 </html>

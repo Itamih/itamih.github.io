@@ -23,11 +23,11 @@
             </div>
             <div class="nav-links">
                 <a href="index.html#services" class="nav-link">Services</a>
-                <a href="case-studies.html" class="nav-link">Case Studies</a>
                 <a href="index.html#process" class="nav-link">Process</a>
                 <a href="about.html" class="nav-link active">About</a>
+                <a href="case-studies.html" class="nav-link">Case Studies</a>
                 <a href="#contact" class="nav-link" onclick="showContactForm(); return false;">Contact</a>
-                <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/sam-itamih/30min'});return false;" class="nav-cta">Book Free Call</a>
+                <a href="#contact" class="nav-cta" onclick="showContactForm(); return false;">Get in Touch</a>
             </div>
         </div>
     </nav>
@@ -66,63 +66,15 @@
             </p>
             <div class="values-grid">
                 <div class="value-card">
-                    <div class="value-icon">🎯</div>
                     <h3 class="value-title">Business-First Approach</h3>
                     <p class="value-description">
                         We don't just build software – we solve business problems. Every solution starts with understanding your unique challenges and goals, then crafting technology that serves your specific needs.
                     </p>
                 </div>
                 <div class="value-card">
-                    <div class="value-icon">⚡</div>
-                    <h3 class="value-title">Practical Innovation</h3>
-                    <p class="value-description">
-                        We use proven technologies and best practices to create reliable, maintainable solutions. Innovation for us means finding the simplest, most effective way to solve complex problems.
-                    </p>
-                </div>
-                <div class="value-card">
-                    <div class="value-icon">🤝</div>
                     <h3 class="value-title">Partnership Mindset</h3>
                     <p class="value-description">
                         We're not just vendors – we're partners in your success. We work closely with you to understand your processes, train your team, and ensure your solution grows with your business.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section approach-section">
-        <div class="container">
-            <h2 class="section-title">Our Approach</h2>
-            <p class="section-subtitle">
-                We follow a proven methodology that ensures your custom software delivers real results from day one.
-            </p>
-            <div class="approach-steps">
-                <div class="approach-step">
-                    <div class="step-number">1</div>
-                    <h3 class="step-title">Deep Understanding</h3>
-                    <p class="step-description">
-                        We start by deeply understanding your business processes, pain points, and goals. This isn't just about technology – it's about how your business actually works.
-                    </p>
-                </div>
-                <div class="approach-step">
-                    <div class="step-number">2</div>
-                    <h3 class="step-title">Strategic Planning</h3>
-                    <p class="step-description">
-                        We create a detailed roadmap that prioritizes high-impact automation opportunities and ensures a clear path to ROI and business value.
-                    </p>
-                </div>
-                <div class="approach-step">
-                    <div class="step-number">3</div>
-                    <h3 class="step-title">Iterative Development</h3>
-                    <p class="step-description">
-                        We build your solution in phases, with regular feedback and testing. This ensures we're always aligned with your needs and can adapt as we learn.
-                    </p>
-                </div>
-                <div class="approach-step">
-                    <div class="step-number">4</div>
-                    <h3 class="step-title">Seamless Integration</h3>
-                    <p class="step-description">
-                        We ensure your new system integrates smoothly with your existing workflows and provide comprehensive training and support for your team.
                     </p>
                 </div>
             </div>
@@ -185,7 +137,7 @@
                 
                 <div class="form-group">
                     <label for="company">Company</label>
-                    <input type="text" id="company" name="company">
+                    <input type="text" id="company" name="company" required>
                 </div>
                 
                 <div class="form-group">
@@ -327,6 +279,5 @@
             submitBtn.textContent = 'Send Message';
         });
     </script>
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 </body>
 </html>

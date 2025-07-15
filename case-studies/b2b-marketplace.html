@@ -86,11 +86,11 @@
             </div>
             <div class="nav-links">
                 <a href="../index.html#services" class="nav-link">Services</a>
-                <a href="../case-studies.html" class="nav-link active">Case Studies</a>
                 <a href="../index.html#process" class="nav-link">Process</a>
                 <a href="../about.html" class="nav-link">About</a>
+                <a href="../case-studies.html" class="nav-link active">Case Studies</a>
                 <a href="#contact" class="nav-link" onclick="showContactForm(); return false;">Contact</a>
-                <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/sam-itamih/30min'});return false;" class="nav-cta">Book Free Call</a>
+                <a href="#contact" class="nav-cta" onclick="showContactForm(); return false;">Get in Touch</a>
             </div>
         </div>
     </nav>
@@ -110,20 +110,6 @@
             <p class="hero-subtitle">
                 How we built Fend.ai, a comprehensive B2B marketplace that connects startups with enterprise partners, featuring payment processing, analytics, and automated matching systems.
             </p>
-            <div class="results-grid">
-                <div class="result-card">
-                    <span class="result-number">300%</span>
-                    <span class="result-label">Increase in partner connections</span>
-                </div>
-                <div class="result-card">
-                    <span class="result-number">80%</span>
-                    <span class="result-label">Faster pilot programs</span>
-                </div>
-                <div class="result-card">
-                    <span class="result-number">50+</span>
-                    <span class="result-label">Active enterprise partners</span>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -168,10 +154,6 @@
                 <div class="solution-item">
                     <h4>Pilot Program Management</h4>
                     <p>Comprehensive project management tools for tracking pilot progress, milestone management, communication logs, and automated reporting for all stakeholders.</p>
-                </div>
-                <div class="solution-item">
-                    <h4>Analytics Dashboard</h4>
-                    <p>Real-time analytics providing insights into partnership performance, success rates, revenue tracking, and platform usage metrics for continuous optimization.</p>
                 </div>
             </div>
         </div>
@@ -270,7 +252,7 @@
                 
                 <div class="form-group">
                     <label for="company">Company</label>
-                    <input type="text" id="company" name="company">
+                    <input type="text" id="company" name="company" required>
                 </div>
                 
                 <div class="form-group">
@@ -412,6 +394,5 @@
             submitBtn.textContent = 'Send Message';
         });
     </script>
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 </body>
 </html>
