@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import ImageZoom from "@/components/ImageZoom";
 
 export const metadata = {
   title: "Hannah: AI-Powered Knowledge Assistant | Itamih Case Study",
@@ -47,7 +47,7 @@ export default function HannahCaseStudy() {
         <div className="max-w-6xl mx-auto space-y-8">
           {/* Homepage Screenshot */}
           <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-lg">
-            <Image
+            <ImageZoom
               src="/images/hannah-homepage.png"
               alt="Hannah AI assistant homepage showing URL input and getting started interface"
               width={1920}
@@ -58,7 +58,7 @@ export default function HannahCaseStudy() {
 
           {/* Chat Interface Screenshot */}
           <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-lg">
-            <Image
+            <ImageZoom
               src="/images/hannah-chat.png"
               alt="Hannah chat interface showing customer support question and AI response with source citations"
               width={1920}

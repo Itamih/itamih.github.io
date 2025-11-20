@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import ImageZoom from "@/components/ImageZoom";
 
 export const metadata = {
   title: "Economic Intelligence Dashboard | Itamih Case Study",
@@ -46,7 +46,7 @@ export default function EconomicDashboardCaseStudy() {
       <section className="py-12 px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-lg">
-            <Image
+            <ImageZoom
               src="/images/dashboard-main.png"
               alt="Economic Intelligence Dashboard showing economic metrics charts and data visualization"
               width={1920}
@@ -180,7 +180,7 @@ export default function EconomicDashboardCaseStudy() {
           {/* Screenshots Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             <div className="rounded-xl overflow-hidden border border-gray-200 shadow-lg">
-              <Image
+              <ImageZoom
                 src="/images/todays-focus.png"
                 alt="Today's Focus feature showing daily themed economic metrics"
                 width={1440}
@@ -189,7 +189,7 @@ export default function EconomicDashboardCaseStudy() {
               />
             </div>
             <div className="rounded-xl overflow-hidden border border-gray-200 shadow-lg">
-              <Image
+              <ImageZoom
                 src="/images/newsstand.png"
                 alt="Newsstand showing parsed real estate newsletter articles"
                 width={1440}
