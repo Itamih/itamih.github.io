@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import ContactForm from "@/components/ContactForm";
 
 export default function Home() {
   return (
@@ -245,74 +246,7 @@ export default function Home() {
             Let's talk about what's slowing you down and how AI can help. Book a free consultation—no commitments, just conversation.
           </p>
           <div className="bg-white rounded-3xl p-8 md:p-12 border border-gray-200 shadow-lg">
-            <form className="space-y-6 max-w-xl mx-auto">
-              <div className="text-left">
-                <label htmlFor="name" className="block text-sm font-semibold text-gray-900 mb-2">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
-                  placeholder="Your name"
-                  required
-                />
-              </div>
-
-              <div className="text-left">
-                <label htmlFor="email" className="block text-sm font-semibold text-gray-900 mb-2">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
-                  placeholder="you@company.com"
-                  required
-                />
-              </div>
-
-              <div className="text-left">
-                <label htmlFor="company" className="block text-sm font-semibold text-gray-900 mb-2">
-                  Company
-                </label>
-                <input
-                  type="text"
-                  id="company"
-                  name="company"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
-                  placeholder="Your company"
-                  required
-                />
-              </div>
-
-              <div className="text-left">
-                <label htmlFor="message" className="block text-sm font-semibold text-gray-900 mb-2">
-                  What tasks are you looking to automate?
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={4}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none resize-none"
-                  placeholder="Tell us about the repetitive tasks that take up your team's time..."
-                  required
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="w-full bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-full text-lg font-semibold transition-colors"
-              >
-                Send Message
-              </button>
-
-              <p className="text-sm text-gray-500 mt-4">
-                We'll get back to you within 24 hours. Usually much sooner.
-              </p>
-            </form>
+            <ContactForm />
           </div>
         </div>
       </section>
