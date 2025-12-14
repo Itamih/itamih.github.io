@@ -1,54 +1,56 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to Claude Code when working with this repository.
 
 ## Project Overview
 
-This is a GitHub Pages static website for Itamih, a business automation software company. The site is built with pure HTML/CSS without any build tools or frameworks.
+Website for Itamih, a business automation company. Built with Next.js and deployed to GitHub Pages.
 
-## Key Files
+## Tech Stack
 
-- `index.html` - Main landing page with services, case studies, and contact form
-- `case-studies.html` - Case studies page (placeholder page)
-- `CNAME` - Custom domain configuration for itamih.com
+- **Framework**: Next.js 15 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Deployment**: GitHub Pages via GitHub Actions
+- **Domain**: itamih.com
 
 ## Development Commands
 
-Since this is a static website without build tools:
+```bash
+npm install    # Install dependencies
+npm run dev    # Start development server (localhost:3000)
+npm run build  # Build for production (outputs to /out)
+```
 
-- **To preview locally**: Open `index.html` directly in a web browser or use a simple HTTP server:
-  ```bash
-  python -m http.server 8000
-  # or
-  npx http-server
-  ```
+## Key Files
 
-- **To deploy**: Simply commit and push changes to the main branch. GitHub Pages will automatically serve the updated files.
+- `app/page.tsx` - Homepage
+- `app/layout.tsx` - Root layout with metadata
+- `app/globals.css` - Global styles and Tailwind imports
+- `app/case-studies/` - Case study pages
+- `components/` - Reusable React components
+- `public/` - Static assets (images, CNAME)
+- `.github/workflows/deploy.yml` - GitHub Actions deployment
 
-## Architecture and Code Patterns
+## Architecture
 
-### CSS Structure
-- All styles are embedded within `<style>` tags in each HTML file
-- Uses modern CSS features: CSS Grid, Flexbox, CSS animations, backdrop filters
-- Dark theme with purple/blue gradient accents (#4f46e5, #7c3aed, #2563eb)
-- Animated gradient orbs for visual effects using keyframe animations
+### Pages
+- Uses Next.js App Router with static export (`output: 'export'` in next.config.ts)
+- All pages are server components by default
+- Client components marked with `'use client'`
 
-### JavaScript Patterns
-- Vanilla JavaScript only, no frameworks
-- Contact form modal functionality in index.html
-- Form submission to `/api/contact` endpoint (requires backend implementation)
-- Smooth scrolling for navigation links
+### Styling
+- Tailwind CSS for utility classes
+- Custom CSS in globals.css for animations and special effects
+- Design: Dark theme with green accents (#00A650)
 
-### Design System
-- Font: Inter with system font fallbacks
-- Base colors: #0a0a0a (background), #ffffff (text), #a0a0a0 (muted text)
-- Consistent spacing and border-radius values
-- Glassmorphism effects with backdrop-filter blur
+### Deployment
+- Automatic deployment via GitHub Actions on push to main
+- Builds to `/out` folder and deploys via `actions/deploy-pages`
+- Custom domain configured via `public/CNAME`
 
-## Important Considerations
+## Important Notes
 
-- Mobile responsive design with breakpoint at 768px
-- Navigation links collapse on mobile (hidden, not hamburger menu)
-- Contact form expects a backend API at `/api/contact` that needs to be implemented
-- Case studies page is currently a placeholder
-- No external dependencies - completely self-contained
+- CNAME file must be in `public/` folder (not root) for Next.js build
+- Contact form uses Web3Forms (requires NEXT_PUBLIC_WEB3FORMS_KEY secret)
+- Images are unoptimized for GitHub Pages compatibility
