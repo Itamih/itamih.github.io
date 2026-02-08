@@ -82,19 +82,19 @@ export default function FundLensCaseStudy() {
             </p>
             <ul className="space-y-3 mb-6">
               <li className="flex items-start">
-                <span className="text-primary mr-3 mt-1">&bull;</span>
+                <span className="text-primary mr-3 mt-1">•</span>
                 <span className="text-gray-600 text-lg">Hours spent manually researching foundations on GuideStar and reading through 990 filings</span>
               </li>
               <li className="flex items-start">
-                <span className="text-primary mr-3 mt-1">&bull;</span>
+                <span className="text-primary mr-3 mt-1">•</span>
                 <span className="text-gray-600 text-lg">No systematic way to score how well a foundation's priorities align with the nonprofit's mission</span>
               </li>
               <li className="flex items-start">
-                <span className="text-primary mr-3 mt-1">&bull;</span>
+                <span className="text-primary mr-3 mt-1">•</span>
                 <span className="text-gray-600 text-lg">Outreach emails are generic and don't reference specific foundation interests or giving patterns</span>
               </li>
               <li className="flex items-start">
-                <span className="text-primary mr-3 mt-1">&bull;</span>
+                <span className="text-primary mr-3 mt-1">•</span>
                 <span className="text-gray-600 text-lg">No pipeline tracking to manage relationships across dozens of potential funders</span>
               </li>
             </ul>
@@ -267,19 +267,19 @@ export default function FundLensCaseStudy() {
             </p>
             <ul className="space-y-3">
               <li className="flex items-start">
-                <span className="text-primary mr-3 mt-1">&check;</span>
+                <span className="text-primary mr-3 mt-1">✓</span>
                 <span className="text-gray-600 text-lg">Foundation research that took weeks now takes hours with smart filtering and AI scoring</span>
               </li>
               <li className="flex items-start">
-                <span className="text-primary mr-3 mt-1">&check;</span>
+                <span className="text-primary mr-3 mt-1">✓</span>
                 <span className="text-gray-600 text-lg">Every outreach email is personalized with specific references to the foundation's giving history</span>
               </li>
               <li className="flex items-start">
-                <span className="text-primary mr-3 mt-1">&check;</span>
+                <span className="text-primary mr-3 mt-1">✓</span>
                 <span className="text-gray-600 text-lg">AI explains exactly why each foundation is a good fit, with per-pillar score breakdowns</span>
               </li>
               <li className="flex items-start">
-                <span className="text-primary mr-3 mt-1">&check;</span>
+                <span className="text-primary mr-3 mt-1">✓</span>
                 <span className="text-gray-600 text-lg">Full pipeline tracking ensures no opportunity falls through the cracks</span>
               </li>
             </ul>
@@ -306,41 +306,41 @@ export default function FundLensCaseStudy() {
                 <div>
                   <h5 className="font-semibold text-gray-900 mb-2">Frontend</h5>
                   <ul className="space-y-2 text-gray-600">
-                    <li>&bull; Next.js 14 App Router with TypeScript</li>
-                    <li>&bull; shadcn/ui components (Radix UI + Tailwind)</li>
-                    <li>&bull; Responsive dashboard with filter sidebar</li>
-                    <li>&bull; Foundation detail pages with score visualizations</li>
+                    <li>• Next.js 14 App Router with TypeScript</li>
+                    <li>• shadcn/ui components (Radix UI + Tailwind)</li>
+                    <li>• Responsive dashboard with filter sidebar</li>
+                    <li>• Foundation detail pages with score visualizations</li>
                   </ul>
                 </div>
 
                 <div>
                   <h5 className="font-semibold text-gray-900 mb-2">Backend</h5>
                   <ul className="space-y-2 text-gray-600">
-                    <li>&bull; FastAPI (Python) for API endpoints</li>
-                    <li>&bull; SQLite for development, PostgreSQL for production</li>
-                    <li>&bull; Claude API for mission alignment scoring</li>
-                    <li>&bull; Claude Vision for PDF contact extraction</li>
-                    <li>&bull; Deployed on Railway.app</li>
+                    <li>• FastAPI (Python) for API endpoints</li>
+                    <li>• SQLite for development, PostgreSQL for production</li>
+                    <li>• Claude API for mission alignment scoring</li>
+                    <li>• Claude Vision for PDF contact extraction</li>
+                    <li>• Deployed on Railway.app</li>
                   </ul>
                 </div>
 
                 <div>
                   <h5 className="font-semibold text-gray-900 mb-2">Data Pipeline</h5>
                   <ul className="space-y-2 text-gray-600">
-                    <li>&bull; IRS 990-PF e-file data via Giving Tuesday Data Lake</li>
-                    <li>&bull; ProPublica Nonprofit Explorer API for 990 enrichment</li>
-                    <li>&bull; Automated grant history extraction from XML filings</li>
-                    <li>&bull; Contact search across multiple public sources</li>
+                    <li>• IRS 990-PF e-file data via Giving Tuesday Data Lake</li>
+                    <li>• ProPublica Nonprofit Explorer API for 990 enrichment</li>
+                    <li>• Automated grant history extraction from XML filings</li>
+                    <li>• Contact search across multiple public sources</li>
                   </ul>
                 </div>
 
                 <div>
                   <h5 className="font-semibold text-gray-900 mb-2">Key Design Decisions</h5>
                   <ul className="space-y-2 text-gray-600">
-                    <li>&bull; <strong>Per-pillar scoring:</strong> AI scores against each mission pillar independently for transparent alignment reasoning</li>
-                    <li>&bull; <strong>Risk flags:</strong> Automatically surfaces concerns like small foundation size or missing grant data</li>
-                    <li>&bull; <strong>7-step outreach:</strong> Structured email sequence with AI-generated personalization at each step</li>
-                    <li>&bull; <strong>Bookmark lists:</strong> Organize foundations into custom lists for different campaigns or priorities</li>
+                    <li>• <strong>Per-pillar scoring:</strong> AI scores against each mission pillar independently for transparent alignment reasoning</li>
+                    <li>• <strong>Risk flags:</strong> Automatically surfaces concerns like small foundation size or missing grant data</li>
+                    <li>• <strong>7-step outreach:</strong> Structured email sequence with AI-generated personalization at each step</li>
+                    <li>• <strong>Bookmark lists:</strong> Organize foundations into custom lists for different campaigns or priorities</li>
                   </ul>
                 </div>
               </div>
