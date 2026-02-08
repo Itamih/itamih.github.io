@@ -6,247 +6,244 @@ export default function Home() {
   return (
     <main className="pt-16">
       {/* Hero Section */}
-      <section className="min-h-[90vh] flex items-center justify-center px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 text-balance">
-            We help businesses automate repetitive tasks with AI
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto text-balance">
-            Most people don't know how to use AI for their business. We discover what's slowing you down and build custom solutions that work.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="#contact"
-              className="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-full text-lg font-semibold transition-colors"
-            >
-              Get Started
-            </Link>
-            <Link
-              href="#work"
-              className="border-2 border-gray-300 hover:border-primary text-gray-900 px-8 py-4 rounded-full text-lg font-semibold transition-colors"
-            >
-              See Our Work
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Value Proposition */}
-      <section className="py-24 px-6 lg:px-8 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-16">
-            From chaos to clarity
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {/* Card 1 */}
-            <div className="text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">We discover</h3>
-              <p className="text-gray-600 text-lg">
-                We analyze your workflow to find repetitive tasks that waste your team's time and energy.
-              </p>
-            </div>
-
-            {/* Card 2 */}
-            <div className="text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">We build</h3>
-              <p className="text-gray-600 text-lg">
-                Custom AI solutions designed specifically for your business. No generic tools—just what you need.
-              </p>
-            </div>
-
-            {/* Card 3 */}
-            <div className="text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">You scale</h3>
-              <p className="text-gray-600 text-lg">
-                Your team focuses on growth while AI handles the repetitive work. More done with less effort.
-              </p>
+      <section className="min-h-[85vh] flex items-center px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto w-full">
+          <div className="max-w-3xl">
+            <p className="text-sm tracking-widest uppercase text-gray-400 mb-6">Business automation studio</p>
+            <h1 className="text-5xl md:text-7xl text-gray-900 mb-8 leading-[1.08]">
+              Your team has better things to do than repetitive work
+            </h1>
+            <p className="text-xl text-gray-500 mb-10 max-w-xl leading-relaxed">
+              We find the tasks that drain your team&apos;s time and replace them with AI systems that actually work. No buzzwords, no generic tools&mdash;just automation built around how your business operates.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href="#contact"
+                className="bg-gray-900 hover:bg-gray-800 text-white px-7 py-3.5 rounded text-base font-medium transition-colors inline-block text-center"
+              >
+                Start a conversation
+              </Link>
+              <Link
+                href="#work"
+                className="text-gray-500 hover:text-gray-900 px-7 py-3.5 text-base font-medium transition-colors inline-block text-center"
+              >
+                See what we&apos;ve built
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Case Studies */}
-      <section id="work" className="py-24 px-6 lg:px-8">
+      {/* What We Do */}
+      <section className="py-28 px-6 lg:px-8 bg-cream grain">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Real work, real results
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+            {/* Left column: headline */}
+            <div className="lg:col-span-5">
+              <h2 className="text-4xl md:text-5xl text-gray-900 leading-tight lg:sticky lg:top-24">
+                We handle the work your team shouldn&apos;t be doing manually
+              </h2>
+            </div>
+
+            {/* Right column: descriptions */}
+            <div className="lg:col-span-6 lg:col-start-7 space-y-16">
+              <div>
+                <h3 className="text-lg font-medium font-sans text-gray-900 mb-3">Find what&apos;s costing you time</h3>
+                <p className="text-gray-500 text-lg leading-relaxed">
+                  We sit down with your team, watch how they work, and identify the repetitive tasks that eat up hours every week. Usually it&apos;s things people have just accepted as &ldquo;part of the job.&rdquo;
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-medium font-sans text-gray-900 mb-3">Build something that fits</h3>
+                <p className="text-gray-500 text-lg leading-relaxed">
+                  No off-the-shelf tools. We build AI systems designed around your specific workflow, your specific data, and the way your team actually operates. If it doesn&apos;t integrate smoothly, it won&apos;t get used.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-medium font-sans text-gray-900 mb-3">Stay with you after launch</h3>
+                <p className="text-gray-500 text-lg leading-relaxed">
+                  Automation isn&apos;t a one-time deliverable. We monitor how it performs, adjust when your needs change, and make sure your team is actually getting value from it&mdash;not just a tool they ignore.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Work */}
+      <section id="work" className="py-28 px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-16">
+            <h2 className="text-4xl md:text-5xl text-gray-900 mb-4">
+              Things we&apos;ve built
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              We've built solutions that save hours every week and transform how businesses operate.
+            <p className="text-lg text-gray-500 max-w-xl">
+              Each project started with a conversation about what wasn&apos;t working. Here&apos;s what came out of it.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Hannah Case Study */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            {/* Featured: Hannah */}
             <Link
               href="/case-studies/hannah"
-              className="group block bg-white rounded-3xl overflow-hidden border border-gray-200 hover:border-primary transition-all hover:shadow-xl"
+              className="group lg:col-span-7 block bg-white rounded-lg overflow-hidden border border-gray-200 hover:border-gray-400 transition-all"
             >
-              <div className="aspect-video relative overflow-hidden bg-gray-50">
+              <div className="aspect-[16/10] relative overflow-hidden bg-gray-100">
                 <Image
                   src="/images/hannah-chat.png"
                   alt="Hannah AI chatbot interface"
                   width={1920}
                   height={1080}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
                 />
               </div>
               <div className="p-8">
-                <div className="text-sm font-semibold text-primary mb-2">AI CUSTOMER SUPPORT</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">
+                <div className="text-xs tracking-widest uppercase text-gray-400 mb-3">AI Customer Support</div>
+                <h3 className="text-2xl text-gray-900 mb-3 group-hover:text-primary transition-colors">
                   Hannah: AI-Powered Knowledge Assistant
                 </h3>
-                <p className="text-gray-600 mb-4">
-                  Customer support agents were spending hours searching documentation to answer questions. We built an AI assistant that instantly retrieves accurate answers from their website content.
+                <p className="text-gray-500 mb-6 leading-relaxed">
+                  Support agents were spending hours searching documentation. We built an AI assistant that finds answers in seconds.
                 </p>
-                <div className="flex items-center gap-6 text-sm">
+                <div className="flex items-center gap-8 text-sm">
                   <div>
-                    <div className="font-bold text-2xl text-gray-900">2 sec</div>
-                    <div className="text-gray-600">Response time</div>
+                    <div className="text-2xl font-heading text-gray-900">2 sec</div>
+                    <div className="text-gray-400 text-xs uppercase tracking-wider">Response time</div>
                   </div>
                   <div>
-                    <div className="font-bold text-2xl text-gray-900">10x</div>
-                    <div className="text-gray-600">More efficient</div>
+                    <div className="text-2xl font-heading text-gray-900">10x</div>
+                    <div className="text-gray-400 text-xs uppercase tracking-wider">More efficient</div>
                   </div>
-                </div>
-                <div className="mt-6 text-primary font-semibold flex items-center gap-2">
-                  Read case study
-                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
                 </div>
               </div>
             </Link>
 
-            {/* Economic Dashboard Case Study */}
-            <Link
-              href="/case-studies/economic-dashboard"
-              className="group block bg-white rounded-3xl overflow-hidden border border-gray-200 hover:border-primary transition-all hover:shadow-xl"
-            >
-              <div className="aspect-video relative overflow-hidden bg-gray-50">
-                <Image
-                  src="/images/dashboard-main.png"
-                  alt="Economic Intelligence Dashboard interface"
-                  width={1920}
-                  height={1080}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="p-8">
-                <div className="text-sm font-semibold text-primary mb-2">REAL ESTATE & INVESTING</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">
-                  Economic Intelligence Dashboard
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Investors were jumping between 5+ websites to track economic data and real estate news. We consolidated everything into one beautiful dashboard with automated newsletter parsing.
-                </p>
-                <div className="flex items-center gap-6 text-sm">
-                  <div>
-                    <div className="font-bold text-2xl text-gray-900">39+</div>
-                    <div className="text-gray-600">Economic metrics</div>
-                  </div>
-                  <div>
-                    <div className="font-bold text-2xl text-gray-900">80%</div>
-                    <div className="text-gray-600">Time saved</div>
+            {/* Right column: stacked */}
+            <div className="lg:col-span-5 flex flex-col gap-6">
+              {/* Economic Dashboard */}
+              <Link
+                href="/case-studies/economic-dashboard"
+                className="group block bg-white rounded-lg overflow-hidden border border-gray-200 hover:border-gray-400 transition-all flex-1"
+              >
+                <div className="aspect-[16/9] relative overflow-hidden bg-gray-100">
+                  <Image
+                    src="/images/dashboard-main.png"
+                    alt="Economic Intelligence Dashboard"
+                    width={1920}
+                    height={1080}
+                    className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <div className="text-xs tracking-widest uppercase text-gray-400 mb-2">Real Estate & Investing</div>
+                  <h3 className="text-xl text-gray-900 mb-2 group-hover:text-primary transition-colors">
+                    Economic Intelligence Dashboard
+                  </h3>
+                  <div className="flex items-center gap-6 text-sm">
+                    <div>
+                      <span className="text-lg font-heading text-gray-900">39+</span>
+                      <span className="text-gray-400 ml-1.5 text-xs uppercase tracking-wider">Metrics</span>
+                    </div>
+                    <div>
+                      <span className="text-lg font-heading text-gray-900">80%</span>
+                      <span className="text-gray-400 ml-1.5 text-xs uppercase tracking-wider">Time saved</span>
+                    </div>
                   </div>
                 </div>
-                <div className="mt-6 text-primary font-semibold flex items-center gap-2">
-                  Read case study
-                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
+              </Link>
+
+              {/* FundLens */}
+              <Link
+                href="/case-studies/fundlens"
+                className="group block bg-white rounded-lg overflow-hidden border border-gray-200 hover:border-gray-400 transition-all flex-1"
+              >
+                <div className="aspect-[16/9] relative overflow-hidden bg-gray-100">
+                  <Image
+                    src="/images/fundlens-dashboard.png"
+                    alt="FundLens grant prospecting"
+                    width={1920}
+                    height={1080}
+                    className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
+                  />
                 </div>
-              </div>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Approach Section */}
-      <section id="approach" className="py-24 px-6 lg:px-8 bg-gray-50">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-16">
-            How we work
-          </h2>
-          <div className="space-y-12">
-            <div className="flex gap-6">
-              <div className="flex-shrink-0 w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold">
-                1
-              </div>
-              <div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-2">Discovery call</h3>
-                <p className="text-gray-600 text-lg">
-                  We start with a conversation about your business. What tasks take up your team's time? Where are the bottlenecks?
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-6">
-              <div className="flex-shrink-0 w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold">
-                2
-              </div>
-              <div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-2">Analysis & proposal</h3>
-                <p className="text-gray-600 text-lg">
-                  We analyze your workflow and identify automation opportunities. You get a clear proposal with timelines and expected impact.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-6">
-              <div className="flex-shrink-0 w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold">
-                3
-              </div>
-              <div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-2">Build & iterate</h3>
-                <p className="text-gray-600 text-lg">
-                  We build your custom solution with regular check-ins. You see progress and provide feedback throughout.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-6">
-              <div className="flex-shrink-0 w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold">
-                4
-              </div>
-              <div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-2">Launch & support</h3>
-                <p className="text-gray-600 text-lg">
-                  We deploy your solution and train your team. Ongoing support ensures everything runs smoothly as you scale.
-                </p>
-              </div>
+                <div className="p-6">
+                  <div className="text-xs tracking-widest uppercase text-gray-400 mb-2">AI Automation</div>
+                  <h3 className="text-xl text-gray-900 mb-2 group-hover:text-primary transition-colors">
+                    FundLens: AI-Powered Grant Prospecting
+                  </h3>
+                  <div className="flex items-center gap-6 text-sm">
+                    <div>
+                      <span className="text-lg font-heading text-gray-900">10K+</span>
+                      <span className="text-gray-400 ml-1.5 text-xs uppercase tracking-wider">Foundations</span>
+                    </div>
+                    <div>
+                      <span className="text-lg font-heading text-gray-900">90%</span>
+                      <span className="text-gray-400 ml-1.5 text-xs uppercase tracking-wider">Less research</span>
+                    </div>
+                  </div>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Contact CTA */}
-      <section id="contact" className="py-24 px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Ready to automate your business?
-          </h2>
-          <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
-            Let's talk about what's slowing you down and how AI can help. Book a free consultation—no commitments, just conversation.
-          </p>
-          <div className="bg-white rounded-3xl p-8 md:p-12 border border-gray-200 shadow-lg">
-            <ContactForm />
+      {/* How We Work */}
+      <section id="approach" className="py-28 px-6 lg:px-8 bg-gray-900 text-white grain">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+            <div className="lg:col-span-4">
+              <h2 className="text-4xl md:text-5xl leading-tight">
+                No surprises, no black boxes
+              </h2>
+            </div>
+            <div className="lg:col-span-7 lg:col-start-6">
+              <div className="space-y-12">
+                <div className="border-l-2 border-white/20 pl-8">
+                  <h3 className="text-xl font-medium font-sans mb-3">We start by listening</h3>
+                  <p className="text-gray-400 text-lg leading-relaxed">
+                    A conversation about what&apos;s actually slowing your team down. Not a sales pitch&mdash;we need to understand the problem before we can tell you if we&apos;re the right fit.
+                  </p>
+                </div>
+
+                <div className="border-l-2 border-white/20 pl-8">
+                  <h3 className="text-xl font-medium font-sans mb-3">We build in the open</h3>
+                  <p className="text-gray-400 text-lg leading-relaxed">
+                    You&apos;ll see a clear proposal before we write a line of code. Once we start, you get regular check-ins and working demos&mdash;not status updates that say &ldquo;on track.&rdquo;
+                  </p>
+                </div>
+
+                <div className="border-l-2 border-white/20 pl-8">
+                  <h3 className="text-xl font-medium font-sans mb-3">We stick around</h3>
+                  <p className="text-gray-400 text-lg leading-relaxed">
+                    Deploying is the halfway point, not the finish line. We train your team, monitor performance, and adjust things as your business evolves.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section id="contact" className="py-28 px-6 lg:px-8 bg-cream grain">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+            <div className="lg:col-span-5">
+              <h2 className="text-4xl md:text-5xl text-gray-900 leading-tight mb-6">
+                Tell us what&apos;s not working
+              </h2>
+              <p className="text-lg text-gray-500 leading-relaxed">
+                No pitch deck needed. Just tell us what&apos;s eating up your team&apos;s time and we&apos;ll let you know if we can help. Most conversations take 20 minutes.
+              </p>
+            </div>
+            <div className="lg:col-span-6 lg:col-start-7">
+              <div className="bg-white rounded-lg p-8 md:p-10 border border-gray-200">
+                <ContactForm />
+              </div>
+            </div>
           </div>
         </div>
       </section>

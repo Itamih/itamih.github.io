@@ -7,27 +7,27 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
+    <nav className="fixed top-0 left-0 right-0 bg-white z-50 border-b border-gray-200/60">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <span className="text-2xl font-bold text-gray-900">Itamih</span>
+            <span className="text-2xl font-heading text-gray-900">Itamih</span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <Link href="/#work" className="text-gray-600 hover:text-gray-900 transition-colors">
-              Our Work
+              Work
             </Link>
             <Link href="/#approach" className="text-gray-600 hover:text-gray-900 transition-colors">
               Approach
             </Link>
             <Link
               href="/#contact"
-              className="bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded-full transition-colors"
+              className="text-gray-900 hover:text-primary border border-gray-900 hover:border-primary px-5 py-1.5 rounded transition-colors text-sm"
             >
-              Get Started
+              Let&apos;s talk
             </Link>
           </div>
 
@@ -64,7 +64,7 @@ export default function Navigation() {
               className="block text-gray-600 hover:text-gray-900"
               onClick={() => setIsOpen(false)}
             >
-              Our Work
+              Work
             </Link>
             <Link
               href="/#approach"
@@ -75,10 +75,10 @@ export default function Navigation() {
             </Link>
             <Link
               href="/#contact"
-              className="block bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded-full text-center"
+              className="block text-gray-900 border border-gray-900 px-5 py-2 rounded text-center hover:text-primary hover:border-primary transition-colors"
               onClick={() => setIsOpen(false)}
             >
-              Get Started
+              Let&apos;s talk
             </Link>
           </div>
         </div>

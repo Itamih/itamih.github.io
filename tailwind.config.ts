@@ -8,9 +8,14 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["var(--font-body)", "system-ui", "sans-serif"],
+        heading: ["var(--font-heading)", "Georgia", "serif"],
+      },
       colors: {
-        primary: "#00A650",
-        "primary-dark": "#008A40",
+        primary: "#0D7C4A",
+        "primary-dark": "#0A6239",
+        cream: "#FAF8F5",
       },
     },
   },

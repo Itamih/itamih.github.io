@@ -59,7 +59,7 @@ export default function ContactForm() {
           type="text"
           id="name"
           name="name"
-          className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
+          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
           placeholder="Your name"
           required
           disabled={isSubmitting}
@@ -74,7 +74,7 @@ export default function ContactForm() {
           type="email"
           id="email"
           name="email"
-          className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
+          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
           placeholder="you@company.com"
           required
           disabled={isSubmitting}
@@ -89,7 +89,7 @@ export default function ContactForm() {
           type="text"
           id="company"
           name="company"
-          className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
+          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
           placeholder="Your company"
           required
           disabled={isSubmitting}
@@ -104,7 +104,7 @@ export default function ContactForm() {
           id="message"
           name="message"
           rows={4}
-          className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none resize-none"
+          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none resize-none"
           placeholder="Tell us about the repetitive tasks that take up your team's time..."
           required
           disabled={isSubmitting}
@@ -113,7 +113,7 @@ export default function ContactForm() {
 
       {/* Success Message */}
       {submitStatus === "success" && (
-        <div className="bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-xl">
+        <div className="bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-lg">
           <div className="flex items-center gap-2">
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -126,7 +126,7 @@ export default function ContactForm() {
 
       {/* Error Message */}
       {submitStatus === "error" && (
-        <div className="bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded-xl">
+        <div className="bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded-lg">
           <div className="flex items-center gap-2">
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -140,7 +140,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-full text-lg font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full bg-gray-900 hover:bg-gray-800 text-white px-8 py-3.5 rounded text-base font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {isSubmitting ? (
           <span className="flex items-center justify-center gap-2">
@@ -151,12 +151,12 @@ export default function ContactForm() {
             Sending...
           </span>
         ) : (
-          "Send Message"
+          "Send it"
         )}
       </button>
 
-      <p className="text-sm text-gray-500 mt-4">
-        We'll get back to you within 24 hours. Usually much sooner.
+      <p className="text-sm text-gray-400 mt-4">
+        We respond within a day. Usually the same afternoon.
       </p>
     </form>
   );
