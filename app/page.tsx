@@ -84,108 +84,102 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-            {/* Featured: Hannah */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Hannah */}
             <Link
               href="/case-studies/hannah"
-              className="group lg:col-span-7 block bg-white rounded-lg overflow-hidden border border-gray-200 hover:border-gray-400 transition-all"
+              className="group block bg-white rounded-lg overflow-hidden border border-gray-200 hover:border-gray-400 transition-all"
             >
-              <div className="aspect-[16/10] relative overflow-hidden bg-gray-100">
+              <div className="aspect-[16/9] relative overflow-hidden bg-gray-100">
                 <Image
-                  src="/images/hannah-chat.png"
-                  alt="Hannah AI chatbot interface"
+                  src="/images/hannah-homepage.png"
+                  alt="Hannah AI knowledge assistant"
                   width={1920}
                   height={1080}
                   className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
                 />
               </div>
-              <div className="p-8">
-                <div className="text-xs tracking-widest uppercase text-gray-400 mb-3">AI Customer Support</div>
-                <h3 className="text-2xl text-gray-900 mb-3 group-hover:text-primary transition-colors">
+              <div className="p-6">
+                <div className="text-xs tracking-widest uppercase text-gray-400 mb-2">AI Customer Support</div>
+                <h3 className="text-xl text-gray-900 mb-2 group-hover:text-primary transition-colors">
                   Hannah: AI-Powered Knowledge Assistant
                 </h3>
-                <p className="text-gray-500 mb-6 leading-relaxed">
-                  Support agents were spending hours searching documentation. We built an AI assistant that finds answers in seconds.
-                </p>
-                <div className="flex items-center gap-8 text-sm">
+                <div className="flex items-center gap-6 text-sm">
                   <div>
-                    <div className="text-2xl font-heading text-gray-900">2 sec</div>
-                    <div className="text-gray-400 text-xs uppercase tracking-wider">Response time</div>
+                    <span className="text-lg font-heading text-gray-900">2 sec</span>
+                    <span className="text-gray-400 ml-1.5 text-xs uppercase tracking-wider">Response time</span>
                   </div>
                   <div>
-                    <div className="text-2xl font-heading text-gray-900">10x</div>
-                    <div className="text-gray-400 text-xs uppercase tracking-wider">More efficient</div>
+                    <span className="text-lg font-heading text-gray-900">10x</span>
+                    <span className="text-gray-400 ml-1.5 text-xs uppercase tracking-wider">More efficient</span>
                   </div>
                 </div>
               </div>
             </Link>
 
-            {/* Right column: stacked */}
-            <div className="lg:col-span-5 flex flex-col gap-6">
-              {/* Economic Dashboard */}
-              <Link
-                href="/case-studies/economic-dashboard"
-                className="group block bg-white rounded-lg overflow-hidden border border-gray-200 hover:border-gray-400 transition-all flex-1"
-              >
-                <div className="aspect-[16/9] relative overflow-hidden bg-gray-100">
-                  <Image
-                    src="/images/dashboard-main.png"
-                    alt="Economic Intelligence Dashboard"
-                    width={1920}
-                    height={1080}
-                    className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
-                  />
-                </div>
-                <div className="p-6">
-                  <div className="text-xs tracking-widest uppercase text-gray-400 mb-2">Real Estate & Investing</div>
-                  <h3 className="text-xl text-gray-900 mb-2 group-hover:text-primary transition-colors">
-                    Economic Intelligence Dashboard
-                  </h3>
-                  <div className="flex items-center gap-6 text-sm">
-                    <div>
-                      <span className="text-lg font-heading text-gray-900">39+</span>
-                      <span className="text-gray-400 ml-1.5 text-xs uppercase tracking-wider">Metrics</span>
-                    </div>
-                    <div>
-                      <span className="text-lg font-heading text-gray-900">80%</span>
-                      <span className="text-gray-400 ml-1.5 text-xs uppercase tracking-wider">Time saved</span>
-                    </div>
+            {/* Economic Dashboard */}
+            <Link
+              href="/case-studies/economic-dashboard"
+              className="group block bg-white rounded-lg overflow-hidden border border-gray-200 hover:border-gray-400 transition-all"
+            >
+              <div className="aspect-[16/9] relative overflow-hidden bg-gray-100">
+                <Image
+                  src="/images/dashboard-main.png"
+                  alt="Economic Intelligence Dashboard"
+                  width={1920}
+                  height={1080}
+                  className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
+                />
+              </div>
+              <div className="p-6">
+                <div className="text-xs tracking-widest uppercase text-gray-400 mb-2">Real Estate & Investing</div>
+                <h3 className="text-xl text-gray-900 mb-2 group-hover:text-primary transition-colors">
+                  Economic Intelligence Dashboard
+                </h3>
+                <div className="flex items-center gap-6 text-sm">
+                  <div>
+                    <span className="text-lg font-heading text-gray-900">39+</span>
+                    <span className="text-gray-400 ml-1.5 text-xs uppercase tracking-wider">Metrics</span>
+                  </div>
+                  <div>
+                    <span className="text-lg font-heading text-gray-900">80%</span>
+                    <span className="text-gray-400 ml-1.5 text-xs uppercase tracking-wider">Time saved</span>
                   </div>
                 </div>
-              </Link>
+              </div>
+            </Link>
 
-              {/* FundLens */}
-              <Link
-                href="/case-studies/fundlens"
-                className="group block bg-white rounded-lg overflow-hidden border border-gray-200 hover:border-gray-400 transition-all flex-1"
-              >
-                <div className="aspect-[16/9] relative overflow-hidden bg-gray-100">
-                  <Image
-                    src="/images/fundlens-dashboard.png"
-                    alt="FundLens grant prospecting"
-                    width={1920}
-                    height={1080}
-                    className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
-                  />
-                </div>
-                <div className="p-6">
-                  <div className="text-xs tracking-widest uppercase text-gray-400 mb-2">AI Automation</div>
-                  <h3 className="text-xl text-gray-900 mb-2 group-hover:text-primary transition-colors">
-                    FundLens: AI-Powered Grant Prospecting
-                  </h3>
-                  <div className="flex items-center gap-6 text-sm">
-                    <div>
-                      <span className="text-lg font-heading text-gray-900">10K+</span>
-                      <span className="text-gray-400 ml-1.5 text-xs uppercase tracking-wider">Foundations</span>
-                    </div>
-                    <div>
-                      <span className="text-lg font-heading text-gray-900">90%</span>
-                      <span className="text-gray-400 ml-1.5 text-xs uppercase tracking-wider">Less research</span>
-                    </div>
+            {/* FundLens */}
+            <Link
+              href="/case-studies/fundlens"
+              className="group block bg-white rounded-lg overflow-hidden border border-gray-200 hover:border-gray-400 transition-all"
+            >
+              <div className="aspect-[16/9] relative overflow-hidden bg-gray-100">
+                <Image
+                  src="/images/fundlens-dashboard.png"
+                  alt="FundLens grant prospecting"
+                  width={1920}
+                  height={1080}
+                  className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
+                />
+              </div>
+              <div className="p-6">
+                <div className="text-xs tracking-widest uppercase text-gray-400 mb-2">AI Automation</div>
+                <h3 className="text-xl text-gray-900 mb-2 group-hover:text-primary transition-colors">
+                  FundLens: AI-Powered Grant Prospecting
+                </h3>
+                <div className="flex items-center gap-6 text-sm">
+                  <div>
+                    <span className="text-lg font-heading text-gray-900">10K+</span>
+                    <span className="text-gray-400 ml-1.5 text-xs uppercase tracking-wider">Foundations</span>
+                  </div>
+                  <div>
+                    <span className="text-lg font-heading text-gray-900">90%</span>
+                    <span className="text-gray-400 ml-1.5 text-xs uppercase tracking-wider">Less research</span>
                   </div>
                 </div>
-              </Link>
-            </div>
+              </div>
+            </Link>
           </div>
         </div>
       </section>

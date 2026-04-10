@@ -42,25 +42,13 @@ export default function HannahCaseStudy() {
         </div>
       </section>
 
-      {/* Main Screenshots */}
+      {/* Main Screenshot */}
       <section className="py-12 px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto space-y-8">
-          {/* Homepage Screenshot */}
+        <div className="max-w-6xl mx-auto">
           <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-lg">
             <ImageZoom
               src="/images/hannah-homepage.png"
               alt="Hannah AI assistant homepage showing URL input and getting started interface"
-              width={1920}
-              height={1080}
-              className="w-full h-auto"
-            />
-          </div>
-
-          {/* Chat Interface Screenshot */}
-          <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-lg">
-            <ImageZoom
-              src="/images/hannah-chat.png"
-              alt="Hannah chat interface showing customer support question and AI response with source citations"
               width={1920}
               height={1080}
               className="w-full h-auto"
