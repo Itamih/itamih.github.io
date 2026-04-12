@@ -75,84 +75,69 @@ export default function Home() {
       {/* Work */}
       <section id="work" className="py-28 px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-16">
-            <h2 className="text-4xl md:text-5xl text-gray-900 mb-4">
-              Things we&apos;ve built
-            </h2>
-            <p className="text-lg text-gray-500 max-w-xl">
-              Each project started with a conversation about what wasn&apos;t working. Here&apos;s what came out of it.
-            </p>
+          <div className="mb-16 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+            <div>
+              <h2 className="text-4xl md:text-5xl text-gray-900 mb-4">
+                Things we&apos;ve built
+              </h2>
+              <p className="text-lg text-gray-500 max-w-xl">
+                Each project started with a conversation about what wasn&apos;t working. Here&apos;s what came out of it.
+              </p>
+            </div>
+            <Link
+              href="/case-studies"
+              className="text-gray-900 hover:text-primary text-base font-medium inline-flex items-center gap-2 transition-colors"
+            >
+              View all case studies
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Hannah */}
-            <Link
-              href="/case-studies/hannah"
-              className="group block bg-white rounded-lg overflow-hidden border border-gray-200 hover:border-gray-400 transition-all"
-            >
-              <div className="aspect-[16/9] relative overflow-hidden bg-gray-100">
+          {/* Clinic: Hero */}
+          <Link
+            href="/case-studies/clinic"
+            className="group block bg-white rounded-lg overflow-hidden border border-gray-200 hover:border-gray-400 transition-all mb-6"
+          >
+            <div className="grid grid-cols-1 lg:grid-cols-5">
+              <div className="lg:col-span-3 aspect-[16/9] lg:aspect-auto relative overflow-hidden bg-gray-100">
                 <Image
-                  src="/images/hannah-homepage.png"
-                  alt="Hannah AI knowledge assistant"
+                  src="/images/clinic-dashboard.png"
+                  alt="Clinic dental practice management system"
                   width={1920}
                   height={1080}
                   className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
                 />
               </div>
-              <div className="p-6">
-                <div className="text-xs tracking-widest uppercase text-gray-400 mb-2">AI Customer Support</div>
-                <h3 className="text-xl text-gray-900 mb-2 group-hover:text-primary transition-colors">
-                  Hannah: AI-Powered Knowledge Assistant
+              <div className="lg:col-span-2 p-8 lg:p-10 flex flex-col justify-center">
+                <div className="text-xs tracking-widest uppercase text-gray-400 mb-3">Healthcare Operations</div>
+                <h3 className="text-2xl md:text-3xl text-gray-900 mb-4 group-hover:text-primary transition-colors leading-tight">
+                  Clinic: Dental Practice Management System
                 </h3>
+                <p className="text-gray-500 leading-relaxed mb-6">
+                  A unified system for appointments, patient records, revenue, and doctor schedules at a dental hospital in India. Replaced paper registers end to end.
+                </p>
                 <div className="flex items-center gap-6 text-sm">
                   <div>
-                    <span className="text-lg font-heading text-gray-900">2 sec</span>
-                    <span className="text-gray-400 ml-1.5 text-xs uppercase tracking-wider">Response time</span>
+                    <span className="text-lg font-heading text-gray-900">Daily</span>
+                    <span className="text-gray-400 ml-1.5 text-xs uppercase tracking-wider">In use</span>
                   </div>
                   <div>
-                    <span className="text-lg font-heading text-gray-900">10x</span>
-                    <span className="text-gray-400 ml-1.5 text-xs uppercase tracking-wider">More efficient</span>
+                    <span className="text-lg font-heading text-gray-900">Paper-free</span>
+                    <span className="text-gray-400 ml-1.5 text-xs uppercase tracking-wider">Front desk</span>
                   </div>
                 </div>
               </div>
-            </Link>
+            </div>
+          </Link>
 
-            {/* Economic Dashboard */}
-            <Link
-              href="/case-studies/economic-dashboard"
-              className="group block bg-white rounded-lg overflow-hidden border border-gray-200 hover:border-gray-400 transition-all"
-            >
-              <div className="aspect-[16/9] relative overflow-hidden bg-gray-100">
-                <Image
-                  src="/images/dashboard-main.png"
-                  alt="Economic Intelligence Dashboard"
-                  width={1920}
-                  height={1080}
-                  className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
-                />
-              </div>
-              <div className="p-6">
-                <div className="text-xs tracking-widest uppercase text-gray-400 mb-2">Real Estate & Investing</div>
-                <h3 className="text-xl text-gray-900 mb-2 group-hover:text-primary transition-colors">
-                  Economic Intelligence Dashboard
-                </h3>
-                <div className="flex items-center gap-6 text-sm">
-                  <div>
-                    <span className="text-lg font-heading text-gray-900">39+</span>
-                    <span className="text-gray-400 ml-1.5 text-xs uppercase tracking-wider">Metrics</span>
-                  </div>
-                  <div>
-                    <span className="text-lg font-heading text-gray-900">80%</span>
-                    <span className="text-gray-400 ml-1.5 text-xs uppercase tracking-wider">Time saved</span>
-                  </div>
-                </div>
-              </div>
-            </Link>
-
-            {/* FundLens */}
+          {/* Sub-hero + compact tiles row */}
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
+            {/* FundLens: Sub-hero */}
             <Link
               href="/case-studies/fundlens"
-              className="group block bg-white rounded-lg overflow-hidden border border-gray-200 hover:border-gray-400 transition-all"
+              className="lg:col-span-3 group block bg-white rounded-lg overflow-hidden border border-gray-200 hover:border-gray-400 transition-all"
             >
               <div className="aspect-[16/9] relative overflow-hidden bg-gray-100">
                 <Image
@@ -180,6 +165,49 @@ export default function Home() {
                 </div>
               </div>
             </Link>
+
+            {/* Compact tiles: Hannah + Economic Dashboard */}
+            <div className="lg:col-span-2 flex flex-col gap-6">
+              <Link
+                href="/case-studies/hannah"
+                className="group flex-1 block bg-white rounded-lg border border-gray-200 hover:border-gray-400 transition-all p-6"
+              >
+                <div className="text-xs tracking-widest uppercase text-gray-400 mb-2">AI Customer Support</div>
+                <h3 className="text-lg text-gray-900 mb-3 group-hover:text-primary transition-colors leading-snug">
+                  Hannah: AI-Powered Knowledge Assistant
+                </h3>
+                <div className="flex items-center gap-5 text-sm">
+                  <div>
+                    <span className="text-base font-heading text-gray-900">2 sec</span>
+                    <span className="text-gray-400 ml-1.5 text-xs uppercase tracking-wider">Response</span>
+                  </div>
+                  <div>
+                    <span className="text-base font-heading text-gray-900">10x</span>
+                    <span className="text-gray-400 ml-1.5 text-xs uppercase tracking-wider">Efficient</span>
+                  </div>
+                </div>
+              </Link>
+
+              <Link
+                href="/case-studies/economic-dashboard"
+                className="group flex-1 block bg-white rounded-lg border border-gray-200 hover:border-gray-400 transition-all p-6"
+              >
+                <div className="text-xs tracking-widest uppercase text-gray-400 mb-2">Real Estate &amp; Investing</div>
+                <h3 className="text-lg text-gray-900 mb-3 group-hover:text-primary transition-colors leading-snug">
+                  Economic Intelligence Dashboard
+                </h3>
+                <div className="flex items-center gap-5 text-sm">
+                  <div>
+                    <span className="text-base font-heading text-gray-900">39+</span>
+                    <span className="text-gray-400 ml-1.5 text-xs uppercase tracking-wider">Metrics</span>
+                  </div>
+                  <div>
+                    <span className="text-base font-heading text-gray-900">80%</span>
+                    <span className="text-gray-400 ml-1.5 text-xs uppercase tracking-wider">Time saved</span>
+                  </div>
+                </div>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
