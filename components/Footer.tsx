@@ -15,13 +15,15 @@ export default function Footer() {
           <div className="flex gap-12 text-sm">
             <div className="space-y-2">
               <Link href="/#work" className="block text-gray-400 hover:text-gray-900 transition-colors">Work</Link>
+              <Link href="/case-studies" className="block text-gray-400 hover:text-gray-900 transition-colors">Case Studies</Link>
               <Link href="/#approach" className="block text-gray-400 hover:text-gray-900 transition-colors">Approach</Link>
               <Link href="/#contact" className="block text-gray-400 hover:text-gray-900 transition-colors">Contact</Link>
             </div>
             <div className="space-y-2">
+              <Link href="/case-studies/clinic" className="block text-gray-400 hover:text-gray-900 transition-colors">Clinic</Link>
+              <Link href="/case-studies/fundlens" className="block text-gray-400 hover:text-gray-900 transition-colors">FundLens</Link>
               <Link href="/case-studies/hannah" className="block text-gray-400 hover:text-gray-900 transition-colors">Hannah AI</Link>
               <Link href="/case-studies/economic-dashboard" className="block text-gray-400 hover:text-gray-900 transition-colors">Economic Dashboard</Link>
-              <Link href="/case-studies/fundlens" className="block text-gray-400 hover:text-gray-900 transition-colors">FundLens</Link>
             </div>
           </div>
         </div>
